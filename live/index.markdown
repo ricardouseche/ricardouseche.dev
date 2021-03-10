@@ -4,3 +4,5 @@
 
 layout: home
 ---
+<script src="../assets/js/randomHeader.js"></script>
+<p id="quote"></p>
