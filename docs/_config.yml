@@ -30,10 +30,11 @@ url: "https://ricardouseche.dev" # the base hostname & protocol for your site, e
 github_username:  ricardouseche
 linkedin_username: ricardouseche
 # Build settings
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.22.0"
 timezone: America/Chicago
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.
