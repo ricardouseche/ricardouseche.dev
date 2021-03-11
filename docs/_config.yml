@@ -28,9 +28,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ricardouseche.dev" # the base hostname & protocol for your site, e.g. http://example.com
 
 github_username:  ricardouseche
-
+linkedin_username: ricardouseche
 # Build settings
-theme: minima
+theme: minimal-mistakes-jekyll
 timezone: America/Chicago
 plugins:
   - jekyll-feed
