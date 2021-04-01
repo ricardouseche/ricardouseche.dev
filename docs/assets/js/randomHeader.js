@@ -1,6 +1,6 @@
 let candidates = [
   'Just some thoughts.',
-  "Ain't that cool",
+  "Ain't that cool.",
   "Didn't know that.",
   'Okay then.',
 ];
