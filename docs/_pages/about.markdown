@@ -9,3 +9,5 @@ Hi. I'm Ricardo Useche. I work at Google as a Cloud Technical Resident.
 This site contains a series of ramblings related to technology. Some of them are lessons I've learned, some other ones are for me to document experiences. Some others are a bit more out there. 
 
 I hope you get something from this too.
+
+*The opinions stated here are my own, not those of my company.*
