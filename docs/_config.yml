@@ -20,17 +20,23 @@
 
 
 
+
+locale: "en-US"
 title: Bit of everything.
-Author: Ricardo Useche
-description: >- # this means to ignore newlines until "baseurl:"
-  All opinions. All mine.
-baseurl: "" # the subpath of your site, e.g. /blog
+title_separator: "-"
+name: Ricardo Useche
+description:   All opinions. All mine.
 url: "https://ricardouseche.dev" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+repository: "ricardouseche/ricardouseche.dev"
+logo: 
+Author: Ricardo Useche
 
 github_username:  ricardouseche
 linkedin_username: ricardouseche
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.22.0"
+minimal_mistakes_skin: "contrast"
 timezone: America/Chicago
 plugins:
   - jekyll-feed
