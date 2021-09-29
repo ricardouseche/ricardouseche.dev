@@ -85,7 +85,7 @@ include: ["_pages"]
 analytics:
   provider: "google-gtag"
   google:
-    tracking_id: "G-CKEZ0SDDK3"
+    tracking_id: "UA-125453369-2"
     anonymize_ip: true # default
 
 # Exclude from processing.
