@@ -26,7 +26,7 @@ subtitle:
 name: Ricardo Useche
 description: I write about a few different things. Sometimes for myself, sometimes for others.
 Author: Ricardo Useche
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   All opinions. All mine.
 url: "https://ricardouseche.dev" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog

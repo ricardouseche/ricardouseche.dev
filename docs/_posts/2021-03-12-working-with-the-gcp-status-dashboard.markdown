@@ -4,9 +4,6 @@ title:  "Working with the Google Cloud Status Dashboard"
 date:   2021-03-12
 categories: 
     - Programming
-    - Python
-    - GCP
-    - JSON
 ---
 
 Considering the amazing possibilities that Cloud Computing provides, it is of great importance to be aware of things that may impede your applications from working properly. 
