@@ -86,7 +86,7 @@ analytics:
   provider: "google-gtag"
   google:
     tracking_id: "G-CKEZ0SDDK3"
-    anonymize_ip: false # default
+    anonymize_ip: true # default
 
 # Exclude from processing.
 # The following items will not be processed, by default.
