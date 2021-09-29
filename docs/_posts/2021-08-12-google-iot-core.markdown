@@ -35,7 +35,7 @@ Computers require operating systems. The same applies to our ESP8266 board, and 
 We'll use a DHT22 sensor which is capable of measuring temperature and humidity. The DHT22 usually comes with three or four pins. Mine has three (VCC, Data, and Ground). We'll connect the ESP to the sensor in the following manner:
 
 - Ground on the ESP to ground on the DHT22.
-- GPIO pin 7 on the ESP to the data on the DHT22.
+- GPIO pin D7 on the ESP to the data on the DHT22.
 - The 3.3V pin on the ESP to the VCC pin on the DHT22.
 
 ## Getting IoT Core in GCP ready
@@ -106,7 +106,7 @@ load('api_mqtt.js');
 load('api_timer.js');
 
 let topic = '/devices/' + Cfg.get('device.id') + '/events';
-let dht = DHT.create(21, DHT.DHT22);
+let dht = DHT.create(13, DHT.DHT22);
 
 Timer.set(5000, true, function() {
   let msg = JSON.stringify({ t: dht.getTemp(), h: dht.getHumidity() });
@@ -119,7 +119,5 @@ Once your device is running this code, you can verify if messages are being rece
 gcloud pubsub subscriptions pull --auto-ack iot-subscription --max-messages=999
 ```
 
-
-
-
+### Writing the Cloud Function
 
