@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  "Setting up GCP logging and alerting with custom structured logs."
+title:  "Setting up GCP logging and alerting with custom structured logs"
 date:   2022-01-29
 categories: 
     - Programming
