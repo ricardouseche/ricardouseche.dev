@@ -19,26 +19,29 @@ Things like availability, latency, performance, and emergency response are thing
 
 There's several resources out there showing how to set up logging and monitoring with Google Cloud's operations suite, but the focus today is on how to set up alerting that includes information from log entries. For example, a string that specifies what the error was, or where it occurred. This is known as [log-based metrics](https://cloud.google.com/logging/docs/logs-based-metrics). There's two different kinds of log-based metrics:
 
-- [System-defined log-based metrics](https://cloud.google.com/logging/docs/logs-based-metrics#system_log-based_metrics), provided by Cloud Logging for use by all Google Cloud projects. Thing of these as metrics that com eout of the box.
+- [System-defined log-based metrics](https://cloud.google.com/logging/docs/logs-based-metrics#system_log-based_metrics), provided by Cloud Logging for use by all Google Cloud projects. Thing of these as metrics that come out of the box.
 
 - [User-defined log-based metrics](https://cloud.google.com/logging/docs/logs-based-metrics#user-metrics), our main focus, which are created by users to extract values from logs by using custom defined filters.
 
-We’ll create a user-defined log-based metric since it provides the needed flexibility to
+We’ll create a user-defined, log-based metric since it provides the needed flexibility to
 accommodate for the custom alert message. Using a counter metric, we can define a few
 labels and fields to extract from the logs when using something like structured logs.
 
-## gcloud
+## Structured Logs
 
 Structured logs make use of the `jsonPayload` field to add structure to the log payload. Logs can
-be written in different ways (Cloud Logging API, gcloud, serializing JSON, etc). For sake of
-ease, we’ll use `gcloud` to create structured logs.
+be written in different ways (Cloud Logging API, gcloud, serializing JSON, etc). To showcase this, we'll use the gcloud to write logs on the Google Cloud console.
 
-Structured logs were generated for testing by using a gcloud command such as:
+Using the `gcloud logging write` ([docs](https://cloud.google.com/sdk/gcloud/reference/logging/write)) command, we can create logs that will make use of the `jsonPayload` field. To try this, use the command below.
+
 
 ```shell
-gcloud logging write alert-test '{"message": "You might need to delete zombie
-dask tasks on: node33", "node": "node33"}' --payload-type=json
+gcloud logging write alert-test '{"message": "hi"}' --payload-type=json
 ```
+
+If everything went through successfully, you should see the logs in Google Cloud's Logs Explorer page.
+
+![Log with jsonPayload in console](/assets/images/logging-alerting-img1.png)
 
 ## Step 1: Create a user-defined logs-based metric
 
