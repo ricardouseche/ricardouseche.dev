@@ -36,7 +36,7 @@ repository: "ricardouseche/ricardouseche.dev"
 author:
   name: "Ricardo Useche"
   avatar: "assets/images/prof-pic.jpg"
-  location: "Houston, TX"
+  location: "New York, NY"
   links:
     - label: "A bit of everything"
       icon: "fas fa-fw fa-link"
@@ -64,6 +64,7 @@ defaults:
       comments: true
       share: true
       related: true
+      show_date: true
   # _pages
   - scope:
       path: "_pages"

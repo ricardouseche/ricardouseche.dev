@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 permalink: /categories/
 title: Categories
 ---
