@@ -3,6 +3,9 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+paginate: 10 # amount of posts to show
+paginate_path: /page:num/
+author_profile: true
 ---
 <script src="../assets/js/randomHeader.js"></script>
 <p id="quote"></p>

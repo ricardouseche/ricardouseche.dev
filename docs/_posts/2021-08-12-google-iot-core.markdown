@@ -1,6 +1,4 @@
 ---
-layout: posts
-classes: wide
 title:  "Google IoT Core with ESP8266: Pub/Sub, Cloud Functions, BigQuery"
 date:   2021-08-12
 categories: 
