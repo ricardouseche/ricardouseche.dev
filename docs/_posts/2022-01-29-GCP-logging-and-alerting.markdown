@@ -29,19 +29,30 @@ labels and fields to extract from the logs when using something like structured 
 
 ## Structured Logs
 
-Structured logs make use of the `jsonPayload` field to add structure to the log payload. Logs can
-be written in different ways (Cloud Logging API, gcloud, serializing JSON, etc). To showcase this, we'll use the gcloud to write logs on the Google Cloud console.
+Structured logs make use of the `jsonPayload` field to add, well, structure to the log payload. Logs can
+be written in different ways (Cloud Logging API, gcloud, serializing JSON, etc). For sake of simplicity, we'll be using `gcloud` commands to create logs.
 
 Using the `gcloud logging write` ([docs](https://cloud.google.com/sdk/gcloud/reference/logging/write)) command, we can create logs that will make use of the `jsonPayload` field. To try this, use the command below.
-
 
 ```shell
 gcloud logging write alert-test '{"message": "hi"}' --payload-type=json
 ```
 
-If everything went through successfully, you should see the logs in Google Cloud's Logs Explorer page.
+You should see the logs in Google Cloud's Logs Explorer page. Alternatively, you can also read log entries using `gcloud logging read <log-name>`.
 
-![Log with jsonPayload in console](/assets/images/logging-alerting-img1.png)
+
+<figure class=half>
+	<a href="/assets/images/logging-alerting-img1.png">
+        <img src="/assets/images/logging-alerting-img1.png" alt="Logs in console">
+    </a>
+    <a href="/assets/images/logging-alerting-img2.png">
+        <img src="/assets/images/logging-alerting-img2.png" alt="Logs in console">
+    </a>
+	<figcaption>
+        Logs in console.
+    </figcaption>
+</figure>
+
 
 ## Step 1: Create a user-defined logs-based metric
 
