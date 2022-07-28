@@ -5,9 +5,9 @@ categories:
     - Programming
 ---
 
-I'm pretty used to working with APIs that follow REST and HTTP methods to present a set of functionality. In simple terms, APIs which expose endpoints for HTTP requests to access a server or a service. They're pretty much commonplace and found in just about every application out there. 
+I'm used to working with what is commonly known as RESTful APIs. In simple terms, APIs which expose endpoints for HTTP requests to access a server or a service. They're pretty much commonplace and found in just about every application out there. Red Hat gives a good, simplistic introduction to them [here](https://www.redhat.com/en/topics/api/what-is-a-rest-api).
 
-However, I was recently introduced to the concept and usage of protocol buffers. Protocal buffers were first introduced by Google with the intention of meeting several criteria related to the serialization of structured data. In a gist, protocol buffers (also known as protobufs), provide a mechanism for communication similarly to what JSON or XML would offer, but in a smaller, faster, and simpler format.
+However, I was recently introduced to the concept and usage of protocol buffers. Protocol buffers were first introduced by Google with the intention of meeting several criteria related to the serialization of structured data. In a gist, protocol buffers (also known as protobufs), provide a mechanism for communication similarly to what JSON or XML would offer, but in a smaller, faster, and simpler format.
 
 Reading through the [Google Developers docs](https://developers.google.com/protocol-buffers/docs/overview) provides with a pretty good overview of the problems protobufs attempt to solve. A few interesting characteristics caught my eye, namely:
 - Protocol buffers can be extended with new info and not invalidate existing data, or requiring code to be updated.
