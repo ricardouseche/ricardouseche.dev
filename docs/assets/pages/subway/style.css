@@ -1,29 +1,40 @@
 body {
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     color: #fcffff;
 }
 
 #goMsg {
-    font-size: 25.5vw;
-}
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: stretch;
-    align-items: center;
-    border-radius: 20px;
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
+    font-size: 25vh;
 }
 
-.green {
-    background: #018266;
+@media screen and (min-width: 640px) {
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: center;
+        border-radius: 20px;
+        height: 100%;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+.directionSymbol {
+    font-size: 25vh;
 }
 
 .red {
     background: #c41a00;
+}
+
+.purple {
+    background: #552583;
+}
+
+.green {
+    background: #018266;
 }
 
 .flex-item:nth-child(1) {
