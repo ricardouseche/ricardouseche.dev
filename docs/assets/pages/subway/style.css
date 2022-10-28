@@ -1,10 +1,7 @@
 body {
     background-color: rgba(255, 255, 255, 0.5);
     color: #fcffff;
-}
-
-#goMsg {
-    font-size: 25vh;
+    font-size: min(max(1rem, 4vw), 22px);
 }
 
 @media screen and (min-width: 640px) {
@@ -21,6 +18,19 @@ body {
     }
 }
 
+.flex-item:nth-child(1) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+}
+
+.flex-item:nth-child(2) {
+    order: 0;
+    flex: 10 1 auto;
+    align-self: auto;
+    min-height: auto;
+}
+
 .directionSymbol {
     font-size: 25vh;
 }
@@ -35,17 +45,4 @@ body {
 
 .green {
     background: #018266;
-}
-
-.flex-item:nth-child(1) {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-}
-
-.flex-item:nth-child(2) {
-    order: 0;
-    flex: 10 1 auto;
-    align-self: auto;
-    min-height: auto;
 }
