@@ -2,6 +2,7 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     color: #fcffff;
     font-size: min(max(1rem, 4vw), 22px);
+    text-align: center;
 }
 
 @media screen and (min-width: 640px) {
