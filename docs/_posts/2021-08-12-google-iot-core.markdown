@@ -11,7 +11,7 @@ We use Google's IoT Core to build a temperature and humidity monitoring system..
 
 It's 2021. Everything is connected to the internet. Data is collected in a multitude of ways, all of the time. Your fridge just pushed a notification about milk running out.
 
-The Internet of Things (IoT) is a large network of internet-connected devices that possess the capability of gathering and sharing . Year after year the list of *things* that make up this network grows, and now you are able to buy a variety of items with these capabilities. Yes, even a fridge. 
+The Internet of Things (IoT) is a large network of internet-connected devices that possess the capability of gathering and sharing information. Year after year the list of *things* that make up this network grows, and now you are able to buy a variety of items with these capabilities. Yes, even a fridge. 
 
 However, on the other end of the spectrum, we've got devices like microcontrollers that are the size of a stick of gum, yet pack a powerful feature set. One of these is the [ESP8266](https://en.wikipedia.org/wiki/ESP8266), which brings Wi-Fi, GPIO pins, I2S/I2C and more in an affordable and pleasant to work with package.
 
@@ -23,7 +23,7 @@ Google also recommends a few different kits to get started with IoT workloads, a
 
 ## Operating System
 
-Computers require operating systems. The same applies to our ESP8266 board, and thus we'll be using [Mongoose OS](https://mongoose-os.com/) to get things started in a matter of minutes. Mongoose OS (mos) allows for higher-level programing languages (like JavaScript) to be used when writing programs for a chips like the one we're using. C and C++ are languages often used for this type of work, but I much prefer going with mos and JS.
+Computers require operating systems. The same applies to our ESP8266 board, and thus we'll be using [Mongoose OS](https://mongoose-os.com/) to get things started in a matter of minutes. Mongoose OS (mos) allows for higher-level programing languages (like JavaScript) to be used when writing programs for a chips like the one we're using. C and C++ are languages often used for this type of work, but I much prefer going with mos and JS for this simple project.
 
 
 ## Sensor
@@ -47,7 +47,7 @@ We'll be using gcloud to interact with GCP for the most part. GCP lets you creat
 
 In essense, IoT Core will help us manage devices and create data connections. This data is going to be sent to Pub/Sub (as messages), and we'll have a Cloud Functin that is _event-driven_. So what will our event be? The Pub/Sub message that our ESP device will be sending! See where this is going? 
 
-Once messages are received, they will trigger our Cloud Function which will run to process and store data in a BigQuery dataset for further analysis and report building.
+Once messages are received, they will trigger our Cloud Function which will run to process and store data in a BigQuery dataset. Once there, we'll be able to write queries for further analysis.
 
 ## gcloud
 
@@ -113,7 +113,7 @@ Timer.set(5000, true, function() {
 }, null);
 {% endhighlight %}
 
-*8Lines 1 to 4**: load up necessary libraries to be able to utilize a few APIs. You can read more about them [here](https://mongoose-os.com/docs/mongoose-os/quickstart/setup.md).
+**Lines 1 to 4**: load up necessary libraries to be able to utilize a few APIs. You can read more about them [here](https://mongoose-os.com/docs/mongoose-os/quickstart/setup.md).
 
 **Line 6**: defines a topic for sending messsages by using the MQTT protocol. MQTT Is a lightweight messaging protocol that is intended to be used by devices like microcontrollers. It is usually preferred for IoT devices which are normally resource constrained, or have very low-bandwidth. 
 
@@ -175,3 +175,7 @@ def process_iot_data(event, context):
 **Line 8**: we define the function that will run when data is received. This function will receive two arguments: `event`, and `context`. The event contains the payload received, while the context object contains information about the event.
 
 **Line 14 to 34**: There's a few things happening here. First, we take the `event` object and its data to decode it as a base64 string. We pull out the timestamp from the `context`. The message is then formatted as a JSON string, and data is pulled out to create a `row` variable. That same variable is then inserted using the `bq_client` using the `destination_table` as the last place for the data.
+
+# Putting it all together
+
+Now, powering the ESP8266 will make it start collecting data from the sensor, and uploading that data to Google Cloud. This will send a message to our Pub/Sub topic. Every new message will trigger the Cloud Function, uploading the data to a BigQuery dataset.
