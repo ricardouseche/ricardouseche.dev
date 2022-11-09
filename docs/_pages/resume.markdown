@@ -4,7 +4,7 @@ title: Resume
 permalink: /resume/
 ---
 
-# Ricardo Useche
+This is an abridged version of my professional history. Check out this [doc](../assets/Ricardo%20Useche%20-%20Resume.pdf) for a fuller view of my education, experience, and more.
 
 ## Currently
 
@@ -13,7 +13,7 @@ New York, NY - Jul 2022
 
 I'm focused on improving Google's internal server platform by increasing adoption and understanding of it. My role provides with the opportunity to combine my technical skills (to understand how the platform works, and how to improve it) and social skills (to understand engineers and their needs).
 
-**Focusing on**: C++, technical writing, developer empathy
+**Focusing on**: C++, technical writing, developer education, documentation, tutorials.
 
 ## Previously
 
