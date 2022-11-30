@@ -8,4 +8,7 @@ paginate_path: /page:num/
 author_profile: true
 ---
 <script src="../assets/js/randomHeader.js"></script>
-<p id="quote"></p>
+<script src="../assets/js/randomGradient.js"></script>
+<div id="gradient">
+    <p id="quote"></p>
+</div>
